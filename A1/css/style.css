@@ -1,0 +1,334 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: #fff;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+    height: 700px;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 209, 251);
+    padding: 30px 0 0 10px;
+    position: relative;
+}
+
+header h1 {
+    width: 200px;
+    height: 40px;
+}
+
+header h1 a {
+    display: block;
+}
+
+nav {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 5;
+}
+
+nav>ul {
+    display: flex;
+    /* gap:20px; */
+    /* flex-basis: 150px; */
+    /* flex-direction: column; */
+}
+
+nav>ul>li>a {
+    display: block;
+    width: 120px;
+    background: #fff;
+    color: #f700ff;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav>ul>li>a:hover {
+    color: #fff;
+    background-color: #38024f;
+}
+
+.sub {
+    display: none;
+}
+
+.sub li a {
+    display: block;
+    width: 120px;
+    background: #fff;
+    color: #f700ff;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.sub li a:hover {
+    color: #fff;
+    background-color: #38024f;
+}
+
+.slider {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 900px;
+    /* 조금 더 있어야 할 껄~ */
+}
+
+.slider ul li {
+    width: 1200px;
+    height: 300px;
+    position: relative;
+}
+
+.slider ul li.s1 {
+    background-image: url(../images/img1.jpg) no-repeat center/cover;
+}
+
+.slider ul li.s2 {
+    background-image: url(../images/img2.jpg) no-repeat center/cover;
+}
+
+.slider ul li.s3 {
+    background-image: url(../images/img3.jpg) no-repeat center/cover;
+}
+
+.slider ul li p {
+    background-color: #fff;
+    opacity: .3;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    /* border: 1px dotted #f700ff; */
+}
+
+.con {
+    height: 200%;
+    display: flex;
+}
+
+/* 공지사항과 갤러리가 탭으로 구분되어있고 그래서 공지사항/갤러리 만큼의 합친영역이 있어야 하기 때문 */
+
+.con article {
+    height: 200px;
+    /* 실제로 보여지는 영역은 200px */
+    width: 400%;
+}
+
+.con1 .tabmenu li {
+    width: 150px;
+    display: inline-block;
+    /* 공지사항 메뉴와 갤러리 메뉴가 같은 라인에 배치되어야 하기 때문 */
+    background-color: #ca29a2;
+    color: #fff;
+}
+
+.con1 .tabmenu li a {
+    display: block;
+    padding: 10px 0;
+    font-weight: 900;
+}
+
+.con1 .tabmenu li.on {
+    background-color: #1243ac;
+    color: #fff;
+}
+
+.con1 .tabmenu li a:hover {
+    background-color: #ca29a2;
+}
+
+.con1 .tabcon {
+    background-color: #fff;
+    height: 150px;
+    padding: 10px;
+}
+
+table {
+    width: 400px;
+}
+
+.notice tr {
+    border-bottom: 1px dashed #ccc;
+}
+
+.notice th {
+    width: 250px;
+    text-align: left;
+    color: #333;
+}
+
+.notice td {
+    text-align: left;
+}
+
+.notice a {
+    font-size: 13px;
+    padding: 5px;
+    display: block;
+}
+
+
+.con1 .gallery {
+    display: none;
+    padding-top: 20px;
+}
+
+.gallery ul {
+    margin: 0 auto;
+}
+
+.gallery ul li {
+    width: 115px;
+    display: inline-block;
+}
+
+.con2 {
+    padding: 10px;
+}
+
+.con2 h2 {
+    background-image: url(../images/banner.jpg);
+    width: 400px;
+    height: 200px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+    left: 360px;
+    top: -200px;
+}
+
+.con3 {
+    padding: 10px;
+}
+
+.con3 h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    background-image: url(../images/direct.jpg);
+    background-position: center center /cover;
+    width: 400px;
+    height: 200px;
+    display: block;
+    position: absolute;
+    top: 410px;
+    right: 370px;
+}
+
+.con3 h2 span {
+    padding-top: 20px;
+    padding-left: 30px;
+    display: block;
+    font-weight: 700;
+
+}
+
+footer {
+    background-color: #333;
+    /* width: 800px; */
+    height: 100px;
+    color: #fff;
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+    margin-top: -200px;
+
+}
+
+footer .logo {
+    width: 200px;
+    padding-left: 10px;
+}
+
+footer p {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 20px;
+}
+
+footer .sns {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+footer .sns li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+footer .sns li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.popup {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    display: none;
+}
+
+.popup-close {
+    padding: 5px;
+}
