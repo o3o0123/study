@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-bottom: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+
+
+/* 폰트 영역 */
+
+
+@font-face {
+    font-family: 'StickieFilled';
+    src: url(../font/StickieFilled.otf) format('woff');
+}
+
+@font-face {
+    font-family: 'StickieOutline';
+    src: url(../font/StickieOutline.otf) format('woff');
+}
+
+@font-face {
+    font-family: 'Toony';
+    src: url(../font/Toony.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'Childhood-Bold';
+    src: url(../font/Childhood-Bold.otf) format('woff');
+}
+
+@font-face {
+    font-family: 'the\ bubble\ letters';
+    src: url(../font/the\ bubble\ letters.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'Chopin-Light';
+    src: url(../font/Chopin-Light.ttf) format('woff');
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 위에 */
+/* .wrap {
+    width: 100%;
+    height: 100%;
+} */
+
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background: #fff;
+    z-index: 9999;
+}
+
+header .inner {
+    width: 1300px;
+    height: 100px;
+    margin: auto;
+    /* background: #eee; */
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+header .inner>a {
+    display: block;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    padding: 0 10px;
+    padding-top: 30px;
+    /* font-family: 'Toony'; */
+    /* font-family: 'Childhood-Bold'; */
+    font-family: 'Chopin-Light';
+    /* font-family: 'the\ bubble\ letters'; */
+    font-size: 40px;
+    /* font-weight: 900; */
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: 20;
+}
+
+nav>ul>li>a {
+    /* font-weight: 900; */
+    display: block;
+    width: 140px;
+    height: 40px;
+    font-size: 11px;
+    text-align: center;
+    padding: 10px 5px;
+    font-weight: 900;
+}
+
+nav>ul>li:hover>a {
+    color: #9a9a9a;
+}
+
+.sub {
+    display: none;
+    margin-top: 20px;
+}
+
+.sub li a {
+    display: block;
+    width: 140px;
+    height: 60px;
+    padding: 15px 5px;
+    font-size: 12px;
+    font-weight: 500;
+    /* font-family: 'Toony'; */
+    font-family: 'the\ bubble\ letters';
+}
+
+.sub li a:hover {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    /* color: #1243ac; */
+    color: #fff;
+
+
+}
+
+.bg {
+    /* position: absolute;
+    top: 40px;
+    left: 0; */
+    width: 100%;
+    height: 140px;
+    z-index: 10;
+    display: none;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    display: flex;
+
+}
+
+.icon li a {
+    /* font-family: 'Chopin-Light'; */
+    /* font-family: 'Toony'; */
+    font-weight: 900;
+    display: block;
+    width: 60px;
+    height: 40px;
+    font-size: 11px;
+    text-align: center;
+    /* padding: 10px 5px; */
+
+}
+
+
+.con {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
+.slide {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slide ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+
+.slide ul li {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.slide ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    justify-content: center; */
+}
+
+
+.slide ul li.s1 {
+    background: url(../img/realmain22.jpg) no-repeat center/cover;
+}
+
+.slide ul li.s2 {
+    background: url(../img/line12.jpg) no-repeat center/cover;
+}
+
+.slide ul li.s3 {
+    background: url(../img/line22.jpg) no-repeat center/cover;
+
+}
+
+/* .slide ul li.s1 {
+    background: url(../img/Kaka.mp4)no-repeat center/cover;
+    video src: ;
+} */
+
+footer {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+footer .inner {
+    width: 1300px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+}
+
+.foo1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #acacac;
+}
+
+.foo2 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.foo2 a {
+    display: block;
+    color: #acacac;
+}
+
+.foo2 a svg {
+    fill: #acacac;
+}
+
+.foo2 a:hover {
+    color: #1243ac;
+}
+
+.foo2 a:hover svg {
+    fill: #1243ac;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        font-size: 10px;
+        height: 70px;
+    }
+
+    header .inner {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    header .inner>a {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    header nav {
+        /* position: absolute;
+        top: 20px;
+        left: 0; */
+        width: 100vw;
+        justify-content: center;
+    }
+
+    header nav>ul>li>a {
+        font-size: 0.5rem;
+    }
+
+    header .sub>li>a {
+        font-size: 0.5rem;
+    }
+
+    .icon {
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+
+    .icon>li>a {
+        font-size: 0.3rem;
+    }
+
+    footer {
+        width: 100vw;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .foo1 {
+        margin-left: 10px;
+    }
+
+    .foo2 {
+        margin-right: 10px;
+    }
+
+    footer a,
+    li {
+        font-size: 0.5rem;
+    }
+
+}
